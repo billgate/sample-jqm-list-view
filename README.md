@@ -3,6 +3,12 @@ Tomatoes<sup>TM</sup> API</a> to create a paginated list of current DVD rentals.
 It demonstrates how to populate a listview with live data from a web API, and 
 how to dynamically generate pages.
 
+Intel(R) HTML5 Development Environment Beta
+-------------------------------------------
+This sample is part of the Intel(R) HTML5 Development Environment tool. 
+Please sign up the beta at http://software.intel.com/en-us/html5.
+To see the technical detail of the sample, please visit the sample article page 
+at http://software.intel.com/en-us/articles/jquery-mobile-listview. 
 
 License Information Follows
 ---------------------------
