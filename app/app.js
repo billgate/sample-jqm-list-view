@@ -1,3 +1,5 @@
+/*jslint browser:true, devel:true, white:true, vars:true, eqeq:true */
+/*global $:false, intel:false, Mustache:false*/
 /*
  * Copyright (c) 2012, Intel Corporation. All rights reserved.
  * File revision: 15 October 2012
@@ -106,7 +108,7 @@ var dataSource = {
             } 
             /* add % unit to rating data */
             else {
-                value.ratings.critics_score += "%"
+                value.ratings.critics_score += "%";
             }
         });
     }
@@ -229,7 +231,7 @@ var viewController = {
             if (viewController.nPrimaryPagesTotal > npages) {
                 $('#' + npages).find('.next')
                     .attr('href', '#' + (npages + 1))
-                    .removeClass('ui-disabled')
+                    .removeClass('ui-disabled');
             } else if (viewController.nPrimaryPagesTotal < npages) {
                 $('#'+ npages).find('.next').addClass('ui-disabled');
             }
@@ -284,7 +286,7 @@ var viewController = {
         if (pagenum == viewController.nPrimaryPagesTotal) {
             $page.find('.next').addClass('ui-disabled');
         } else {
-            $page.find('.next').attr('href', '#' + (pagenum + 1))
+            $page.find('.next').attr('href', '#' + (pagenum + 1));
         }
         
         /* hide footer until main content inserted */
@@ -304,7 +306,7 @@ var viewController = {
         
         /* while still loading data, show spinner */
         $page.one('pageshow', function() { 
-            if ($page.find(':jqmData(role=content)').html().trim() == '') {
+            if ($page.find(':jqmData(role=content)').html().trim() === '') {
                 $.mobile.showPageLoadingMsg();
             }
         });
