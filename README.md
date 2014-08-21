@@ -1,25 +1,26 @@
-This sample is a multi-page jQuery Mobile scaffold using springboard-based navigation.
-It also demonstrates custom styling techniques to adapt to various screen sizes and 
-rotations, and achieve a different look and feel than jQuery Mobile defaults.
+jQuery Mobile List View
+-------------------------------------------
+
+This jQuery Mobile sample uses the <a href=http://developer.rottentomatoes.com/>Rotten 
+Tomatoes<sup>TM</sup> API</a> to create a paginated list of current DVD rentals. 
+It demonstrates how to populate a listview with live data from a web API, and 
+how to dynamically generate pages.
 
 Intel(R) XDK
 -------------------------------------------
 This sample is part of the Intel(R) XDK tool. 
-Download the Intel(R) XDK  at http://software.intel.com/en-us/html5.
+Please sign up the beta at http://software.intel.com/en-us/html5.
 To see the technical detail of the sample, please visit the sample article page 
-at http://software.intel.com/en-us/articles/jquery-mobile-springboard-navigation. 
+at http://software.intel.com/en-us/articles/jquery-mobile-listview. 
 
 License Information Follows
 ---------------------------
 * index.html
+* css/tomatometer.css
 * css/style.css
-* app/springboard.js
-* app/deviceCheck.js
-* win8-images/*.png
-* win8-proj/*.jsproj,*.pfx,*.appxmanifest
-* icon.png
+* app/app.js
 * config.xml
-* icon.png
+* sample_icon_72x72.png
 * abstract.txt
 * app.json
 * screenshot.png
@@ -74,39 +75,22 @@ Copyright (c) 2012, jQuery Foundation and other contributors.
 * source:   http://jquerymobile.com/
 * license:  http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
 
-jQuery for Windows 8
---------------------
-* vendor/jquery/jquery-1.8.2-win8-1.0.js
 
-Copyright (c) 2012, appendTo, LLC
-Copyright (c) 2012, jQuery Foundation and other contributors.
+jQuery JSONP Plugin
+-------------------
+* vendor/jquery.jsonp/jquery.jsonp.js
 
-* source:   https://github.com/appendto/jquery-win8
-* license:  http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+Copyright (c) 2012 Julian Aubourg
 
-Springboard Icons
------------------
-* images/springboard/tumblr.png
-* images/springboard/facebook.png
-* images/springboard/instagram.png
-* images/springboard/youtube.png
+* source:  https://github.com/jaubourg/jquery-jsonp
+* license: http://www.opensource.org/licenses/mit-license.php
 
-Terms of Use
---------------------
-YouTube
----------
-http://www.youtube.com/yt/brand/using-logo.html
 
-Facebook
----------
-https://www.facebookbrand.com/guidelines?asset=2&media=1,2,3&platform=0
-https://www.facebookbrand.com/dos-donts
+Mustache
+--------
+* vendor/mustache/mustache.js
 
-Instagram
----------
-http://help.instagram.com/304689166306603
+Copyright (c) 2010 Jan Lehnardt
 
-tumblr
----------
-http://www.tumblr.com/docs/en/trademark_guidelines
-
+* source:  https://github.com/janl/mustache.js/
+* license: https://github.com/janl/mustache.js/blob/master/LICENSE

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.intel.jqmspringboardnav"
+        id        = "com.intel.jqmlistview"
         versionCode="1" 
         version   = "0.0.1">
 
@@ -9,12 +9,12 @@
     <!-- section on this page http://developer.android.com/tools/publishing/versioning.html -->
     <!-- for more information regarding the use and purpose of the versionCode attribute -->
 
-    <name>jQMSpringboard</name>
+    <name>jQMListview</name>
     <content src="index.html"/>
     <icon src="icon.png"/>
 
     <description>
-        A multi-page jQuery Mobile scaffold using springboard-based navigation.  
+        A jQuery Mobile sample that uses the Rotten Tomatoes TM API to create a paginated list of current DVD rentals.  
     </description>
 
     <author href="http://software.intel.com/html5">
@@ -25,7 +25,7 @@
     <!-- <preference name="phonegap-version" value="2.0.0" /> -->
 
     <!-- options for Android platform -->
-    <!-- <preference name="orientation" value="default" /> -->
+    <!-- <preference name="orientation" value="portrait" /> -->
     <!-- <preference name="android-minSdkVersion" value="9" />  --> <!-- Android 2.3 --> 
 
     <!-- APIs used by this app (permission list presented to the user on install) -->
