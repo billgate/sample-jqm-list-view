@@ -5,11 +5,11 @@
       "type": "Demo",
       "createDefaultBuildConfigs": true,
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-imagecapture/sample.zip",
+      "src": "https://edge-intel.s3.amazonaws.com/samples/production/sample-jqm-list-view/sample.zip",
       "sourceDirectory": "www",
-      "projectGuid": "f21a07a0-1fc7-458e-997e-f293b6a2aec7",
-      "lastModifiedDate": 1407903393673,
-      "creationDate": 1407900227644
+      "projectGuid": "17d84447-51fb-4302-a615-5c5090e77e55",
+      "lastModifiedDate": 1407961337990,
+      "creationDate": 1407903549120
     },
     "sourceDirectory": "www",
     "cordovaPluginsDirectory": "plugins",
@@ -34,19 +34,6 @@
     ],
     "cordovaPlugins": [
       {
-        "id": "intel.xdk.camera",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
-      },
-      {
-        "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.0",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {}
-      },
-      {
         "id": "org.apache.cordova.device",
         "version": "0.2.9",
         "selectedState": "Included",
@@ -54,8 +41,8 @@
         "paramvals": {}
       },
       {
-        "id": "org.apache.cordova.camera",
-        "version": "0.2.9",
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.0",
         "selectedState": "Included",
         "data": {},
         "paramvals": {}
@@ -72,8 +59,8 @@
           "android-targetedSdkVersion": "19"
         },
         "isActive_": true,
-        "appName_": "CameraCapture",
-        "appID_": "xdk.sample.cameracapture",
+        "appName_": "JQMListView",
+        "appID_": "xdk.sample.jqmlistview",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -84,7 +71,7 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration illustrates how to use the camera features of hybrid apps.",
+        "appDescription_": "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages.",
         "appVersionCode_": "1"
       },
       "Android-Crosswalk": {
@@ -96,8 +83,8 @@
           "android-targetedSdkVersion": "19"
         },
         "isActive_": true,
-        "appName_": "CameraCapture",
-        "appID_": "xdk.sample.cameracapture",
+        "appName_": "JQMListView",
+        "appID_": "xdk.sample.jqmlistview",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -108,19 +95,19 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Crosswalk with Cordova 3.x",
-        "appDescription_": "This demonstration illustrates how to use the camera features of hybrid apps.",
+        "appDescription_": "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages.",
         "appVersionCode_": "1"
       },
       "iOS": {
         "platform_": "ios",
         "name_": "iOS",
         "preferences_": {
-          "ios-target": "5",
-          "Orientation": "portrait"
+          "Orientation": "portrait",
+          "ios-target": "5"
         },
         "isActive_": true,
-        "appName_": "CameraCapture",
-        "appID_": "xdk.sample.cameracapture",
+        "appName_": "JQMListView",
+        "appID_": "xdk.sample.jqmlistview",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -131,7 +118,7 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration illustrates how to use the camera features of hybrid apps."
+        "appDescription_": "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages."
       },
       "Windows8": {
         "platform_": "windows8",
@@ -140,8 +127,8 @@
           "Orientation": "portrait"
         },
         "isActive_": true,
-        "appName_": "CameraCapture",
-        "appID_": "xdk.sample.cameracapture",
+        "appName_": "JQMListView",
+        "appID_": "xdk.sample.jqmlistview",
         "appAccess_": "*",
         "icons_": [],
         "splashes_": [],
@@ -152,14 +139,14 @@
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.0.1",
         "runtime_": "Cordova 3.x",
-        "appDescription_": "This demonstration illustrates how to use the camera features of hybrid apps."
+        "appDescription_": "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages."
       },
       "WindowsPhone8": {
         "platform_": "wp8",
         "name_": "WindowsPhone8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "CameraCapture",
+        "appName_": "JQMListView",
         "appID_": "not.yet.specified",
         "appAccess_": "*",
         "icons_": [],
