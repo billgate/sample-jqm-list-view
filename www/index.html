@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    
-    <!--
-     * Copyright (c) 2012, Intel Corporation. All rights reserved.
-     * File revision: 15 October 2012
-     * Please see http://software.intel.com/html5/license/samples 
-     * and the included README.md file for license terms and conditions.
-    -->
-    <meta name="copyright" content="&copy; 2012, Intel Corporation. All rights reserved." />
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="copyright" content="&copy; 2012-2015, Intel Corporation. All rights reserved." />
 
-    <!-- stylesheets -->
+    <title>DVD Rentals</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+
     <!-- note: use jquery.mobile-1.1.1.min.css for production -->
     <link rel="stylesheet" type="text/css" href="vendor/jquery.mobile/jquery.mobile-1.1.1.css" />
     <link rel="stylesheet" type="text/css" href="css/tomatometer.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    
-    <!-- scripts -->
+
+    <!-- Recommended location for your third-party JavaScript libraries -->
+    <!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/mc/hammer.js"></script> -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+
     <!-- note: use jquery-1.8.0.min.js & jquery.mobile-1.1.1.min.js for production -->
     <script type="text/javascript" src="vendor/mustache/mustache.js"></script>
     <script type="text/javascript" src="vendor/jquery/jquery-1.8.0.js"></script>
     <script type="text/javascript" src="vendor/jquery.jsonp/jquery.jsonp.js"></script>
     <script type="text/javascript" src="vendor/jquery.mobile/jquery.mobile-1.1.1.js"></script>
-    <script src="intelxdk.js"></script>
-    <script src="cordova.js"></script>
-    <script src="xhr.js"></script>
-    <script type="text/javascript" src="app/app.js"></script>
-    <!-- title of app -->
-    <title>DVD Rentals</title>
-    
-    <!-- mobile layout sized appropriately to viewport width and not zoomable -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
+<!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+    <script src="cordova.js" id="xdkJScordova_"></script>
+    <script src="app/app.js"></script>
 </head>
 
 <body>
-    
     <!-- initial page to obtain developer key -->
     <div data-role="page" id="loginPage" data-theme="a">
 
@@ -62,7 +65,7 @@
             </form>
         </div>
     </div>
-    
+
     <!-- information dialog page to display Flixster trademark notice -->
     <div data-role="dialog" id="aboutMsg">
         <div data-role="header" data-theme="d">
@@ -70,7 +73,7 @@
         </div>
         <div data-role="content" data-theme="c">
             <p>Flixster, Rotten Tomatoes, the Fresh Logo, and the Rotten Logo are trademarks or registered trademarks of Flixster, Inc. in the United States and other countries.</p>
-            <a href="page-dialogs.html" data-role="button" data-mini="true" data-rel="back" data-theme="b">OK</a>       
+            <a href="page-dialogs.html" data-role="button" data-mini="true" data-rel="back" data-theme="b">OK</a>
         </div>
     </div>
 
@@ -81,7 +84,7 @@
         </div>
         <div data-role="content" data-theme="c">
             <p>Please register for a Flixster developer key at http://developer.rottentomatoes.com/apps/register</p>
-            <a href="page-dialogs.html" data-role="button" data-mini="true" data-rel="back" data-theme="b">OK</a>       
+            <a href="page-dialogs.html" data-role="button" data-mini="true" data-rel="back" data-theme="b">OK</a>
         </div>
     </div>
 
@@ -92,34 +95,34 @@
         </div>
         <div data-role="content" data-theme="c">
             <p>
-                Key <span id="wrongkey"></span> is not valid. 
-                Or you did not start Chrome with the &#8209;&#8209;allow&#8209;running&#8209;insecure&#8209;content flag 
-                (necessary for this particular sample; please see http://tinyurl.com/jqmlistview for more detail).<br><br> 
+                Key <span id="wrongkey"></span> is not valid.
+                Or you did not start Chrome with the &#8209;&#8209;allow&#8209;running&#8209;insecure&#8209;content flag
+                (necessary for this particular sample; please see http://tinyurl.com/jqmlistview for more detail).<br><br>
                 Please try again.
             </p>
-            <a href="page-dialogs.html" data-role="button" data-rel="back" data-theme="b">OK</a>       
+            <a href="page-dialogs.html" data-role="button" data-rel="back" data-theme="b">OK</a>
         </div>
     </div>
 
     <!-- skeletons for primary pages to be created upon application initialization -->
     <!-- content of each to be filled on demand during page navigation             -->
-    
+
     <!-- template for primary page skeleton -->
     <script type="text/html" id="primaryPageSkeletonTmpl">
-        <div data-role="page" class="primaryPage">            
-            
+        <div data-role="page" class="primaryPage">
+
             <!-- header -->
             <!-- top-right button to refresh entire app with new movie data from Flixster web API -->
             <div data-role="header" data-id="app-header">
                 <h1>DVD Rentals</h1>
                 <a href="#" data-icon="refresh" data-iconpos="notext" class="ui-btn-right refreshBtn">Refresh</a>
             </div>
-            
+
             <!-- content -->
             <!-- to contain listview dynamically created with movie data from Flixster web API -->
             <div data-role="content">
             </div>
-            
+
             <!-- footer -->
             <!-- navbar to link previous and next pages of movie data -->
             <div data-role="footer" data-theme="a">
@@ -130,10 +133,10 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
     </script>
-    
+
     <!-- template for content of primary pages -->
     <script type="text/html" id="primaryPageContentTmpl">
         <ul data-role="listview" class="movies">
@@ -154,26 +157,26 @@
             {{/.}}
         </ul>
     </script>
-    
-    <!-- single copy of secondary page skeleton, content and title to be filled on demand -->    
+
+    <!-- single copy of secondary page skeleton, content and title to be filled on demand -->
     <div data-role="page" id="secondaryPage">
-        
+
         <!-- header -->
         <div data-role="header" data-id="app-header">
             <h1 id="title"></h1>
             <a href="#" data-rel="back" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left"></a>
         </div>
-        
+
         <!-- content -->
         <div data-role="content">
         </div>
-        
+
         <!-- footer -->
         <div data-role="footer" data-position="fixed">
         </div>
-        
+
     </div>
-    
+
     <!-- template for content of secondary pages -->
     <script type="text/html" id="secondaryPageContentTmpl">
         <!-- basic movie info highlighted at the top -->
@@ -190,7 +193,7 @@
             <div class="highlight-rating">
                 <!-- numeric rating with corresponding icon -->
                 <div>
-                    <i class="icon small {{&ratings.critics_rating}}"></i> 
+                    <i class="icon small {{&ratings.critics_rating}}"></i>
                     {{ratings.critics_score}}
                 </div>
                 <!-- corresponding Tomatometer bar, to be filled with appropriate color and length based on actual rating -->
@@ -204,7 +207,7 @@
         <!-- synopsis of the movie -->
         <p class="synopsis">{{synopsis}}</p>
     </script>
-    
+
 </body>
 
 </html>
