@@ -2,20 +2,21 @@
    "highlights" : [
       "jQuery"
    ],
-   "iconUrl" : "https://github.com/gomobile/sample-jqm-list-view/blob/master/icon.png",
+   "articleUrl" : "http://software.intel.com/en-us/articles/jquery-mobile-listview",
+   "projectTypeName" : "com.intel.xdk.projecttype.webapp",
+   "appPreview" : true,
    "repoName" : "sample-jqm-list-view",
+   "tooltip" : "Paginated list of current DVD rentals with dynamic page generation and open web API data.",
+   "appName" : "demo.jqmlistview",
+   "iconUrl" : "https://github.com/gomobile/sample-jqm-list-view/blob/master/icon.png",
+   "title" : "jQM List View",
+   "mobile" : false,
+   "zipUrl" : "",
    "relName" : null,
+   "description" : "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages.",
+   "visible" : true,
    "screenshotUrl" : "https://github.com/gomobile/sample-jqm-list-view/blob/master/screenshot.png",
    "keywords" : [
       "jQuery"
-   ],
-   "zipUrl" : "",
-   "tooltip" : "Paginated list of current DVD rentals with dynamic page generation and open web API data.",
-   "articleUrl" : "http://software.intel.com/en-us/articles/jquery-mobile-listview",
-   "appPreview" : "true",
-   "visible" : "true",
-   "description" : "This jQuery Mobile sample uses the Rotten Tomatoes API to create a paginated list of current DVD rentals. It demonstrates how to populate a listview with live data from a web API, and how to dynamically generate pages.",
-   "projectTypeName" : "com.intel.xdk.projecttype.webapp",
-   "title" : "jQM List View",
-   "appName" : "demo.jqmlistview"
+   ]
 }
