@@ -23,38 +23,11 @@
         "buildConfigurations": {
             "Android": {
                 "platform_": "android",
-                "runtime_": "W3C on Cordova",
-                "name_": "Android",
-                "preferences_": {
-                    "android-minSdkVersion": "14",
-                    "android-targetSdkVersion": "19",
-                    "android-installLocation": "auto"
-                },
-                "isActive_": true,
-                "appName_": "JQMListView",
-                "appID_": "not.yet.specified",
-                "appAccess_": [
-                    {
-                        "origin": "*"
-                    }
-                ],
-                "icons_": [],
-                "splashes_": [],
-                "addlPermissions_": "",
-                "excludedLibraries_": "",
-                "appVersion_": "0.0.1",
-                "appVersionCode_": "1",
-                "crosswalkVersion_": "?",
-                "cordovaCLIVersion_": "?",
-                "appAuthor_": "Intel XDK"
-            },
-            "Android-Crosswalk": {
-                "platform_": "android",
                 "runtime_": "W3C on Crosswalk",
                 "name_": "Android-Crosswalk",
                 "preferences_": {
                     "android-minSdkVersion": "14",
-                    "android-targetSdkVersion": "19",
+                    "android-targetSdkVersion": "23",
                     "android-installLocation": "auto"
                 },
                 "isActive_": true,
@@ -80,7 +53,7 @@
                 "runtime_": "W3C on Cordova",
                 "name_": "iOS",
                 "preferences_": {
-                    "ios-target": "6",
+                    "ios-target": "8.0",
                     "ios-configuration": "adhoc"
                 },
                 "isActive_": true,
